@@ -3,6 +3,7 @@ import { Api } from "./Api.mjs";
 import config from "../config/config.js";
 
 export async function searchImages(imageText) {
+  console.log(imageText)
   const response = await Api().get(
     "/?method=flickr.photos.search&api_key=" +
       config.apiKey +

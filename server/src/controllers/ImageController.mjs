@@ -2,7 +2,8 @@ import * as FlickrService from '../services/FlickrService.mjs'
 
 export async function searchImage(req, res) {
   try {
-      const images = await FlickrService.searchImages("nature")
+    console.log()
+      const images = await FlickrService.searchImages(req.params.imageText)
     return res.send({"images":images})
   } catch (error) {
     console.log(error)

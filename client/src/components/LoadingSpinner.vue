@@ -12,7 +12,7 @@
   margin: auto;
   visibility: visible;
   animation: spin 1s infinite linear;
-  margin-top:3rem;
+  margin-top: 3rem;
 }
 
 #loading.display {
@@ -29,5 +29,4 @@
     transform: rotate(360deg);
   }
 }
-
 </style>

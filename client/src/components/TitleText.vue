@@ -1,8 +1,4 @@
-<script setup>
-const props = defineProps({
-  title: String,
-});
-</script>
+<script setup></script>
 <template>
   <h1 class="title-text"><slot /></h1>
 </template>

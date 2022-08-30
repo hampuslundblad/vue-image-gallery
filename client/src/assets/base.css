@@ -8,7 +8,7 @@
   --clr-light: #fff;
   --clr-green: #04aa6d;
   --clr-grey: #333333;
-  --clr-white: #FFF;
+  --clr-white: #fff;
   /* font sizes */
   --fs-900: 9.375rem;
   --fs-800: 6.25rem;
@@ -20,7 +20,7 @@
   --fs-200: 0.875rem;
 
   /* font families */
-  --ff-sans-normal: "Roboto", sans-serif;
+  --ff-sans-normal: "Roboto Flex", sans-serif;
   --ff-sans-cond: "Roboto Condensed", sans-serif;
   --ff-sans-serif: "Source Serif Pro", serif;
 }
@@ -52,7 +52,8 @@ picture {
 body {
   line-height: 1.5;
   min-height: 100vh;
-
+  padding: 0;
+  margin: 0;
 }
 
 /* Make images easier to work with */
@@ -68,11 +69,11 @@ button,
 textarea,
 select {
   font: inherit;
+  appearance: none;
 }
 
 /* Remove animations for those who have turned them off */
-@media (prefers-reduced-motion:reduce) {
-
+@media (prefers-reduced-motion: reduce) {
   *,
   *::before,
   *::after {
@@ -89,13 +90,12 @@ select {
 
 .flex {
   display: flex;
-  gap: var(--gap)
-
+  gap: var(--gap);
 }
 
 .grid {
   display: grid;
-  gap: var(--gap)
+  gap: var(--gap);
 }
 
 .container {
@@ -104,44 +104,62 @@ select {
   margin-inline: auto;
 }
 
-.ff-serif {font-family:var(--ff-sans-serif)}
-.ff-sans-cond{font-family:var(--ff-sans-cond)}
-.ff-sans-normal{font-family: var(--ff-sans-normal)}
+.ff-serif {
+  font-family: var(--ff-sans-serif);
+}
+.ff-sans-cond {
+  font-family: var(--ff-sans-cond);
+}
+.ff-sans-normal {
+  font-family: var(--ff-sans-normal);
+}
 
-.letter-spacing-1 {letter-spacing: 4.75px;}
-.letter-spacing-2 {letter-spacing: 2.7px;}
-.letter-spacing-3 {letter-spacing: 2.35;}
+.letter-spacing-1 {
+  letter-spacing: 4.75px;
+}
+.letter-spacing-2 {
+  letter-spacing: 2.7px;
+}
+.letter-spacing-3 {
+  letter-spacing: 2.35;
+}
 
-.uppercase {text-transform: uppercase;}
+.uppercase {
+  text-transform: uppercase;
+}
 
-.fs-900 {font-size : var(--fs-900);}
-.fs-800 {font-size : var(--fs-800);}
-.fs-700 {font-size : var(--fs-700);}
-.fs-600 {font-size : var(--fs-600);}
-.fs-500 {font-size : var(--fs-500);}
-.fs-400 {font-size : var(--fs-400);}
-.fs-300 {font-size : var(--fs-300);}
-.fs-200 {font-size : var(--fs-200);}
+.fs-900 {
+  font-size: var(--fs-900);
+}
+.fs-800 {
+  font-size: var(--fs-800);
+}
+.fs-700 {
+  font-size: var(--fs-700);
+}
+.fs-600 {
+  font-size: var(--fs-600);
+}
+.fs-500 {
+  font-size: var(--fs-500);
+}
+.fs-400 {
+  font-size: var(--fs-400);
+}
+.fs-300 {
+  font-size: var(--fs-300);
+}
+.fs-200 {
+  font-size: var(--fs-200);
+}
 
 .fs-900,
 .fs-800,
 .fs-700,
-.fs-600{
-  line-height:1.1;
+.fs-600 {
+  line-height: 1.1;
 }
 
 .flow > * + * {
-  margin-top: var(--flow-space,1rem);
-}
-
-/*------------------*/
-/*     Components   */
-/*------------------*/
-
-.large-button{
-  display:grid;
-  padding: 0 2em;
-  aspect-ratio: 2 / 1 ; /* It will be twice as wide.*/
-  text-decoration:none;
-  place-item:center;
+  margin-top: var(--flow-space, 1rem);
 }
