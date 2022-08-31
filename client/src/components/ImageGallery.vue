@@ -21,7 +21,7 @@ const loadImages = async (imageText) => {
     error.value = "Something went wrong:  " + err.message;
   }
   isLoading.value = false;
-};
+}; 
 
 watch(
   () => props.search,
@@ -38,8 +38,8 @@ onMounted(() => {
 <template>
   <ErrorMessage>{{ error }}</ErrorMessage>
   <LoadingSpinner v-if="isLoading" />
-  <div v-if="!isLoading && !error" class="image-container">
-    <div v-for="imageUri in imageUris" :key="imageUri.id">
+  <div v-if="!isLoading && !error" class="image-container" data-test="image-container">
+    <div v-for="imageUri in imageUris" :key="imageUri.id" data-test="image">
       <img class="image" :src="imageUri" />
     </div>
   </div>
