@@ -14,7 +14,7 @@ const handleUserSearch = () => {
 <template>
   <div class="main-container">
     <TitleText>Image Gallery</TitleText>
-    <div class="user-input-container">
+    <div class="user-input-container" data-test="user-input-container">
       <input
         class="input"
         v-on:keyup.enter="handleUserSearch()"

@@ -1,7 +1,7 @@
 import { describe, it, expect } from "vitest";
 
 import { mount } from "@vue/test-utils";
-import TitleText from "../TitleText.vue";
+import TitleText from "../components/TitleText.vue";
 
 describe("TitleText.vue", () => {
   it("renders slot content properly", () => {

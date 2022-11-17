@@ -1,7 +1,7 @@
 import { describe, it, expect } from "vitest";
 
 import { mount } from "@vue/test-utils";
-import Header from "../TheHeader.vue";
+import Header from "../components/TheHeader.vue";
 
 describe("Header.vue", () => {
   it("renders slot content properly", () => {
